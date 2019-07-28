@@ -1,0 +1,17 @@
+#include <Arduino.h>
+
+#define CONFIG_WIFI_SSID "REPLACE_SSID"
+#define CONFIG_WIFI_PASSWORD "REPLACE_PASSWORD"
+/*
+#define CONFIG_WIFI_SSID "oPhone"
+#define CONFIG_WIFI_PASSWORD "tructruc"
+*/
+// clang-format off
+const String http_url = "/api/services/automation/trigger";
+const char* http_host = "REPLACE_HOSTNAME_OR_IP";
+const uint16_t http_port = REPLACE_PORT;
+const String http_token =  "Bearer REPLACE_HASS_TOKEN";
+
+
+
+// clang-format on
