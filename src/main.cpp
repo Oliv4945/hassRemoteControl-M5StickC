@@ -30,6 +30,8 @@ void setup() {
   Serial.println(M5.Axp.GetCoulombchargeData());
   Serial.print("GetCoulombData: ");
   Serial.println(M5.Axp.GetCoulombData());
+  Serial.print("GetCoulombData2: ");
+  Serial.println(M5.Axp.GetCoulombData2());
   Serial.print("GetCoulombdischargeData: ");
   Serial.println(M5.Axp.GetCoulombdischargeData());
   Serial.print("GetIchargeData: ");
@@ -112,7 +114,7 @@ void triggerAutomation(String automation_name) {
   content = client.readStringUntil('\r');
   if (content == "HTTP/1.1 200 OK") {
     M5.Lcd.setCursor(0, 40);
-    M5.Lcd.printf("%.3f mAh", M5.Axp.GetCoulombData());
+    M5.Lcd.printf("%.3f mAh", M5.Axp.GetCoulombData2());
     M5.Lcd.setCursor(0, 50);
     M5.Lcd.printf("%.3f V", (M5.Axp.GetVbatData() * 1.1 / 1000));
     M5.Lcd.setCursor(0, 10);
